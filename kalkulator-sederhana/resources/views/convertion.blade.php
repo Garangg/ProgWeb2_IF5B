@@ -32,16 +32,16 @@
                     <option value="fahrenheit">Fahrenheit</option>
                     <option value="kelvin">Kelvin</option>
                 </select>
-            </form>
-                <div>
-                    Hasil : {{ $hasil ?? '' }}
-                </div>
                 <div class="d-grid gap-2 col-12 my-3">
                     <button class="btn btn-primary" type="submit">Konversi</button>
                 </div>
+            </form>
             <div>
-                <a class="btn btn-danger d-grid gap-2 col-12 my-3" href="/">Kembali</a>
+                Hasil : {{ $hasil ?? '' }}
             </div>
+        </div>
+        <div>
+            <a class="btn btn-danger d-grid gap-2 col-4 my-5 mx-auto" href="/">Kembali</a>
         </div>
     </div>
 </body>

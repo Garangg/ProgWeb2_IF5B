@@ -35,22 +35,22 @@
                         <option value="/">/</option>
                     </select>
                     <input class="form-control my-3 p-2" type="text" name="num2" placeholder="Angka Kedua" required>
+                    <div class="d-grid gap-2 col-12 my-3" >
+                        <button class="btn btn-primary" type="submit">Hitung</button>
+                    </div>
                 </form>
                     <div>
                         Hasil : {{ $result ?? '' }}
-                    </div>
-                    <div class="d-grid gap-2 col-12 my-3" >
-                        <button class="btn btn-primary" type="submit">Hitung</button>
                     </div>
                 @if(session('error'))
                     <div style="color: red">
                         {{ session('error') }}
                     </div>
                 @endif
-                <div>
-                    <a class="btn btn-danger d-grid gap-2 col-12 my-3" href="/">Kembali</a>
-                </div>
             </div>
+        </div>
+        <div>
+            <a class="btn btn-danger d-grid gap-2 col-4 my-5 mx-auto" href="/">Kembali</a>
         </div>
     </div>
 </body>
