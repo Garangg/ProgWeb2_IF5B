@@ -19,7 +19,7 @@ class MahasiswaController extends Controller
         $kehadiran = $request->input('kehadiran');
 
         // Rumus nilai akhir
-        $nilai_akhir = ($nilai_uts * 0.3) + ($nilai_uas * 0.4) + ($nilai_tugas * 0.3) + (($kehadiran / 18) * 100 * 0.1);
+        $nilai_akhir = number_format(($nilai_uts * 0.3) + ($nilai_uas * 0.4) + ($nilai_tugas * 0.3) + (($kehadiran / 18) * 100 * 0.1),2);
 
         $status = $nilai_akhir > 60 ? 'Lulus' : 'Tidak Lulus';
 
