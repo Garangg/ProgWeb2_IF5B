@@ -13,12 +13,7 @@ use App\Http\Controllers\AuthController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('mainpage', [
-        "title" => "Home"
-    ]);
-});
-Route::get('/movies', function () {
+Route::get('/products', function () {
     return view('productPage', [
         "title" => "Product"
     ]);
@@ -28,7 +23,10 @@ route::get('/about', function () {
         "title" => "About"
     ]);
 });
-
-
+route::get('/main', function () {
+    return view('mainPage', [
+        "title" => "Home"
+    ]);
+});
 route::get('/register', [AuthController::class ,'registerForm'])->name('register');
-route::get('/login', [AuthController::class ,'loginForm'])->name('login');
+route::get('/', [AuthController::class ,'loginForm'])->name('login');
