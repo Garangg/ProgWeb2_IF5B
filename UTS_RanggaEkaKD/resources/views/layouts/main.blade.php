@@ -20,7 +20,7 @@
         }
         .card-img-top {
             height: 620px;
-            object-fit: contain;
+            object-fit: fill;
         }
         .card-body {
             display: flex;

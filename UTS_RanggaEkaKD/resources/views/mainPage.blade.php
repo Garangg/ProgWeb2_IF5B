@@ -48,7 +48,7 @@
                 <p class="lead">Kami menjadi rumah bagi berbagai jenis buku, menyuguhkan keberagaman cerita dari berbagai genre, ilmu pengetahuan yang mendalam, serta menyemai imajinasi dari setiap halaman. Di sini, keberagaman bukan hanya tentang judul-judul, tapi juga tentang pengalaman membaca yang membangkitkan rasa ingin tahu dan menghidupkan khayalan."</p>
             </div>
         </div>
-        <div class="row flex-column-reverse flex-sm-column-reverse flex-lg-row flex-md-row featurette align-items-center">
+        <div class="row flex-column-reverse flex-sm-column-reverse flex-lg-row flex-md-row featurette align-items-center mt-5">
             <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">Anytime, Everything, Everywhere. </h2>
                 <p class="lead">Kami di sini untuk memastikan bahwa setiap buku yang Anda inginkan tersedia kapan pun Anda membutuhkannya. Dari klasik hingga terbaru, buku-buku favorit Anda dan bahkan yang belum Anda temukan, semuanya ada di ujung jari Anda.

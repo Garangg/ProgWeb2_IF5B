@@ -12,6 +12,14 @@ class MahasiswaController extends Controller
     }
 
     public function hitung (Request $request){
+        $this->validate($request,[
+            'nama' => 'required|min:5|max:20',
+            'uts' => 'required|numeric',
+            'uas' => 'required|numeric',
+            'tugas' => 'required|numeric',
+            'kehadiran' => 'required|numeric'
+        ]);
+        
         $nama = $request->input('nama');
         $nilai_uts = $request->input('uts');
         $nilai_uas = $request->input('uas');
