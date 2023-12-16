@@ -43,7 +43,7 @@
 
                                     <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square"></i> Edit</a>   
 
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="confirmDelete(id)"> Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="confirmDelete(id)"><i class="bi bi-trash"></i>Delete</button>
                                 </form>
                             </td>
                         </tr>
