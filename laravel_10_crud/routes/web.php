@@ -21,6 +21,10 @@ Route::get('/', function () {
 });
 
 Route::resource("products", ProductController::class);
+Route::get('productsTrash/', [ProductController::class, 'trash'])->name('products.trash');
+Route::get('productsTrash/{product}', [ProductController::class, 'restore'])->name('products.restore');
+Route::delete('productsTrash/{product}', [ProductController::class, 'forceDelete'])->name('products.forceDelete');
+
 
 Auth::routes();
 
