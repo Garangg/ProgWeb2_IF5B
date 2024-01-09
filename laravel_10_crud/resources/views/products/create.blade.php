@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('products.store') }}" method="post">
+                <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-3 row">
@@ -65,6 +65,14 @@
                             @if ($errors->has('description'))
                                 <span class="text-danger">{{ $errors->first('description') }}</span>
                             @endif
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="image" class="col-md-4 col-form-label text-md-end text-start">Image</label>
+                        <div class="col-md-6">
+                            <input type="file" id="image" name="image_path">
+                            {{-- <button type="submit" class="btn btn-primary mt-2">Upload</button> --}}
                         </div>
                     </div>
                     

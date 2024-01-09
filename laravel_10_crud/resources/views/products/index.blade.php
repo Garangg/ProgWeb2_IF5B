@@ -25,6 +25,7 @@
                         <th scope="col">Name</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Action</th>
                       </tr>
                     </thead>
@@ -36,6 +37,9 @@
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->quantity }}</td>
                             <td>{{ $product->price }}</td>
+                            <td>
+                                <img src="{{ asset('/uploads/image_product/' . $product->image_path) }}" alt="{{ $product->name }}" width="50" height="50"> <!-- Display the product image -->
+                            </td>
                             <td>
                                 <form action="{{ route('products.destroy', $product->id) }}" method="post">
                                     @csrf

@@ -49,8 +49,7 @@
                         <div class="col-md-6" style="line-height: 35px;">
                             {{ $product->description }}
                         </div>
-                    </div>
-        
+                    </div> 
             </div>
         </div>
     </div>    
