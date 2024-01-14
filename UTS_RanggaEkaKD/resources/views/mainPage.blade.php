@@ -1,4 +1,4 @@
-@extends('layouts/main')
+@extends('layouts/app')
 
 @section('content')
     {{-- Heroes --}}
@@ -11,7 +11,7 @@
               <h1 class="display-5 fw-bold lh-1 mb-4 text-white">BukuKu</h1>
               <p class="lead mb-3 text-white">Di BukuKu, Anda akan menemukan lebih dari sekadar buku. Kami menyediakan kurasi terbaik dari berbagai genre, mulai dari fiksi hingga non-fiksi, literatur klasik hingga yang terkini, dan sumber daya pembelajaran yang memikat. Setiap halaman adalah petualangan baru, dan kami bersemangat untuk membantu Anda menemukan cerita yang tepat untuk setiap momen dalam hidup Anda.</p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a href="/products" class="text-white text-decoration-none">See products</a></button>
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a href="{{ route('books') }}" class="text-white text-decoration-none">See products</a></button>
               </div>
             </div>
           </div>

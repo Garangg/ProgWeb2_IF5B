@@ -12,21 +12,24 @@ use App\Http\Controllers\AuthController;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
+Auth::routes();
 */
-Route::get('/products', function () {
-    return view('productPage', [
-        "title" => "Product"
-    ]);
-});
-route::get('/about', function () {
-    return view('aboutPage', [
-        "title" => "About"
-    ]);
-});
-route::get('/main', function () {
-    return view('mainPage', [
-        "title" => "Home"
-    ]);
-});
-route::get('/register', [AuthController::class ,'registerForm'])->name('register');
-route::get('/', [AuthController::class ,'loginForm'])->name('login');
+
+route::get('/', [AuthController::class, 'loginForm'])->name('loginForm');
+route::get('/register', [AuthController::class, 'registerForm'])->name('registerForm');
+route::post('/login', [AuthController::class, 'login'])->name('login');
+route::post('/register', [AuthController::class, 'register'])->name('register');
+route::post('/logout', function () {
+    auth()->logout();
+    return redirect()->route('loginForm');
+})->name('logout');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
+Route::get('/books', [App\Http\Controllers\BooksController::class, 'index'])->name('books');
+Route::get('/books/create', [App\Http\Controllers\BooksController::class, 'create'])->name('books.create');
+Route::post('/books', [App\Http\Controllers\BooksController::class, 'store'])->name('books.store');
+Route::get('/books/{book}', [App\Http\Controllers\BooksController::class, 'show'])->name('books.show');
+Route::get('/books/{book}/edit', [App\Http\Controllers\BooksController::class, 'edit'])->name('books.edit');
+Route::put('/books/{book}', [App\Http\Controllers\BooksController::class, 'update'])->name('books.update');
+Route::delete('/books/{book}', [App\Http\Controllers\BooksController::class, 'destroy'])->name('books.destroy');
